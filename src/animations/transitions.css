@@ -1,0 +1,61 @@
+.fade-blur-enter-active {
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.fade-blur-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fade-blur-enter-from {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translateY(20px);
+}
+
+.fade-blur-leave-to {
+  opacity: 0;
+  filter: blur(6px);
+}
+
+/* ── Directional page slides ── */
+.page-slide-left-enter-active,
+.page-slide-right-enter-active {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.page-slide-left-leave-active,
+.page-slide-right-leave-active {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Forward: new page slides in from right */
+.page-slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.page-slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+/* Backward: new page slides in from left */
+.page-slide-right-enter-from {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.page-slide-right-leave-to {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+/* Reduced motion: just fade */
+@media (prefers-reduced-motion: reduce) {
+  .page-slide-left-enter-from,
+  .page-slide-left-leave-to,
+  .page-slide-right-enter-from,
+  .page-slide-right-leave-to {
+    transform: none;
+  }
+}

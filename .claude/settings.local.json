@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx vue-tsc:*)",
+      "Bash(grep -r \"console\\\\.error\\\\|console\\\\.warn\\\\|TODO\\\\|FIXME\\\\|HACK\" C:Projectsflower-shopsrc --include=*.vue --include=*.ts)"
+    ]
+  }
+}

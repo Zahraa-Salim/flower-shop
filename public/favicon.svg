@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="r" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8a0b4"/>
+      <stop offset="100%" stop-color="#c5687a"/>
+    </linearGradient>
+  </defs>
+  <!-- Petals -->
+  <path d="M24 6 C28 6 34 10 34 18 C34 24 28 28 24 28 C20 28 14 24 14 18 C14 10 20 6 24 6Z" fill="url(#r)" opacity="0.9"/>
+  <path d="M10 16 C10 12 14 8 20 10 C24 12 26 16 24 20 C22 24 16 26 12 24 C8 22 10 18 10 16Z" fill="url(#r)" opacity="0.75"/>
+  <path d="M38 16 C38 12 34 8 28 10 C24 12 22 16 24 20 C26 24 32 26 36 24 C40 22 38 18 38 16Z" fill="url(#r)" opacity="0.75"/>
+  <path d="M14 26 C12 22 14 18 18 18 C22 18 24 22 24 26 C24 30 20 34 16 32 C12 30 14 28 14 26Z" fill="url(#r)" opacity="0.65"/>
+  <path d="M34 26 C36 22 34 18 30 18 C26 18 24 22 24 26 C24 30 28 34 32 32 C36 30 34 28 34 26Z" fill="url(#r)" opacity="0.65"/>
+  <!-- Stem -->
+  <path d="M24 28 C24 28 24 42 24 42" stroke="#5a8a5a" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <path d="M24 34 C20 30 16 32 14 34" stroke="#5a8a5a" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M24 38 C28 34 32 36 34 38" stroke="#5a8a5a" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+</svg>
