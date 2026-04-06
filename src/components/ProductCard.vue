@@ -66,7 +66,6 @@
 
 <script setup lang="ts">
 import { computed, onUnmounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
 import gsap from 'gsap'
 import { prefersReducedMotion } from '@/animations/motion'
 import OptimizedImage from '@/components/OptimizedImage.vue'
@@ -80,15 +79,12 @@ const props = defineProps<{ product: Product }>()
 
 const fallback = 'https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=900&q=80'
 
-const router    = useRouter()
 const cartStore     = useCartStore()
 const wishlistStore = useWishlistStore()
 const { open: openQuickView } = useQuickView()
 const cardRef     = ref<HTMLElement | null>(null)
 const cartBtnWrap = ref<HTMLElement | null>(null)
 const showToast   = ref(false)
-
-const wished = computed(() => wishlistStore.isWished(props.product.id))
 
 const formattedPrice = computed(() => props.product.price.toFixed(2))
 const meaning = computed(() => getFlowerMeaning(props.product))
@@ -101,7 +97,6 @@ const colorMap: Record<string, string> = {
   Lavender: '#967bb6', Green: '#27ae60',
 }
 
-const goToProduct = () => void router.push(`/product/${props.product.id}`)
 const quickView = () => openQuickView(props.product)
 
 const toggleWish = () => { wishlistStore.toggleWishlist(props.product.id) }

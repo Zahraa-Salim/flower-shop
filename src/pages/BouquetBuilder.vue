@@ -142,7 +142,7 @@
                 <h2 class="text-2xl font-semibold text-rose-950">Your Bouquet</h2>
                 <p class="mt-1 text-sm text-stone-500">A soft, hand-picked arrangement in progress.</p>
               </div>
-              <p ref="sidebarTotalRef" class="text-2xl font-semibold text-emerald-800">${{ totalPrice.toFixed(2) }}</p>
+              <p class="text-2xl font-semibold text-emerald-800">${{ totalPrice.toFixed(2) }}</p>
             </div>
 
             <!-- Vase area -->
@@ -295,7 +295,6 @@ const gridContainerRef = ref<HTMLElement | null>(null)
 const vaseAreaRef = ref<HTMLElement | null>(null)
 const addButtonRef = ref<HTMLElement | null>(null)
 const bottomSheetRef = ref<HTMLElement | null>(null)
-const sidebarTotalRef = ref<HTMLElement | null>(null)
 
 const sidebarItemRefs = new Map<number, HTMLElement>()
 const cardRefs = new Map<number, HTMLElement>()

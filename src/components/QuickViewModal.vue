@@ -2,7 +2,7 @@
   <Teleport to="body">
     <Transition name="qv">
       <div v-if="isOpen && product" class="qv-overlay" @click.self="close">
-        <div class="qv-modal" ref="modalRef">
+        <div class="qv-modal">
           <!-- Close button -->
           <button class="qv-close" type="button" @click="close" title="Close">✕</button>
 
@@ -77,7 +77,6 @@ import { getFlowerMeaning } from '@/composables/useFlowerMeaning'
 
 const { product, isOpen, close } = useQuickView()
 const cartStore = useCartStore()
-const modalRef = ref<HTMLElement | null>(null)
 
 const fallback = 'https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=900&q=80'
 

@@ -84,7 +84,7 @@
                 {{ product.description }}
               </p>
 
-              <div ref="meaningRef" class="rounded-3xl border border-rose-100 bg-gradient-to-br from-rose-50 to-amber-50/40 p-5">
+              <div class="rounded-3xl border border-rose-100 bg-gradient-to-br from-rose-50 to-amber-50/40 p-5">
                 <div class="flex items-start gap-3">
                   <span class="mt-0.5 text-lg">✿</span>
                   <div>
@@ -323,7 +323,6 @@ const reviewComment = ref('')
 const reviewErrorMessage = ref('')
 const detailContentRef = ref<HTMLElement | null>(null)
 const descriptionRef = ref<HTMLElement | null>(null)
-const meaningRef = ref<HTMLElement | null>(null)
 const priceRef = ref<HTMLElement | null>(null)
 const addToCartButtonRef = ref<HTMLElement | null>(null)
 
