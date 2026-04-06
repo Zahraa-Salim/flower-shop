@@ -1,3 +1,4 @@
+/** easings.ts — Shared CSS and GSAP easing curve constants */
 export const easings = {
   smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
   soft: 'cubic-bezier(0.25, 0.8, 0.25, 1)',

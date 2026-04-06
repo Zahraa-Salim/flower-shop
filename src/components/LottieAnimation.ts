@@ -1,3 +1,4 @@
+/** LottieAnimation.ts — Lottie web component wrapper with error fallback */
 import { computed, defineComponent, h, onMounted, onUnmounted, ref, watch } from 'vue'
 import type { PropType } from 'vue'
 import '@lottiefiles/lottie-player/dist/lottie-player.js'

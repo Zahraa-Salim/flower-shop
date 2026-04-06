@@ -1,3 +1,4 @@
+<!-- OrderTracking.vue — Real-time order status tracker with visual stepper -->
 <template>
   <section class="min-h-screen bg-gradient-to-b from-rose-50 via-white to-emerald-50 px-4 py-10 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-2xl pt-20">
@@ -9,7 +10,7 @@
         ← Back
       </button>
 
-      <div class="mt-8 rounded-[2rem] bg-white/85 p-8 shadow-sm ring-1 ring-rose-100">
+      <div ref="headerRef" class="mt-8 rounded-[2rem] bg-white/85 p-8 shadow-sm ring-1 ring-rose-100">
         <p class="text-sm font-semibold uppercase tracking-[0.3em] text-rose-400">Order Tracking</p>
         <h1 class="heading-serif mt-2 text-3xl font-semibold text-rose-950">
           Order #{{ orderId }}
@@ -65,10 +66,13 @@ import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import { supabase } from '@/lib/supabase'
 import type { RealtimeChannel } from '@supabase/supabase-js'
+import gsap from 'gsap'
+import { prefersReducedMotion } from '@/animations/motion'
 
 const route = useRoute()
 const orderId = computed(() => route.params.id as string)
 
+const headerRef = ref<HTMLElement | null>(null)
 const loading = ref(true)
 const error = ref('')
 const orderStatus = ref('pending')
@@ -135,6 +139,10 @@ function subscribeToUpdates() {
 }
 
 onMounted(() => {
+  if (headerRef.value && !prefersReducedMotion()) {
+    gsap.from(headerRef.value, { y: 30, autoAlpha: 0, duration: 0.6, ease: 'power2.out', immediateRender: false })
+  }
+
   fetchOrder()
   subscribeToUpdates()
 })

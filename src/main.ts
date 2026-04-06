@@ -1,3 +1,4 @@
+/** main.ts — Vue app bootstrap with Pinia and Router plugins */
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from '@/App.vue'

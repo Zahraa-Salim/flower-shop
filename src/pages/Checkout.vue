@@ -1,7 +1,8 @@
+<!-- Checkout.vue — Order form with delivery scheduling and recurring gift options -->
 <template>
   <section class="min-h-screen bg-gradient-to-b from-rose-50 via-white to-emerald-50 px-4 pt-24 pb-10 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-6xl">
-      <div class="rounded-[2rem] bg-white/85 p-8 shadow-sm ring-1 ring-rose-100">
+      <div ref="headerRef" class="rounded-[2rem] bg-white/85 p-8 shadow-sm ring-1 ring-rose-100">
         <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div class="space-y-3">
             <p class="text-sm font-semibold uppercase tracking-[0.3em] text-rose-400">Final Touches</p>
@@ -168,13 +169,15 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import { useCartStore } from '@/stores/cart'
 import type { CartItemId } from '@/stores/cart'
 import { supabase } from '@/lib/supabase'
+import gsap from 'gsap'
+import { prefersReducedMotion } from '@/animations/motion'
 
 interface LastOrderSummaryItem {
   id: CartItemId
@@ -202,6 +205,8 @@ const cartStore = useCartStore()
 const { items, totalItems, totalPrice } = storeToRefs(cartStore)
 const { user } = storeToRefs(authStore)
 
+const headerRef = ref<HTMLElement | null>(null)
+
 const deliveryAddress = ref('')
 const deliveryDate = ref('')
 const messageCard = ref('')
@@ -210,6 +215,12 @@ const isRecurring = ref(false)
 const recurrenceInterval = ref('monthly')
 const loading = ref(false)
 const errorMessage = ref('')
+
+onMounted(() => {
+  if (headerRef.value && !prefersReducedMotion()) {
+    gsap.from(headerRef.value, { y: 30, autoAlpha: 0, duration: 0.6, ease: 'power2.out', immediateRender: false })
+  }
+})
 
 const today = new Date().toISOString().split('T')[0]
 const formattedTotalPrice = computed(() => totalPrice.value.toFixed(2))

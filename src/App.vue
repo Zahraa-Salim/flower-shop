@@ -1,3 +1,4 @@
+<!-- App.vue — Root app shell with conditional navbar, page transitions, and global components -->
 <template>
   <div class="min-h-screen">
     <Navbar v-if="!hideNavbar" />

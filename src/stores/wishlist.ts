@@ -1,3 +1,4 @@
+/** wishlist.ts — Pinia store for wishlist with Supabase sync and guest fallback */
 import { defineStore } from 'pinia'
 import { supabase } from '@/lib/supabase'
 import { useAuthStore } from '@/stores/auth'

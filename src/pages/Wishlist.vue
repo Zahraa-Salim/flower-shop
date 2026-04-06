@@ -1,7 +1,8 @@
+<!-- Wishlist.vue — Saved favorite products grid -->
 <template>
   <section class="min-h-screen bg-gradient-to-b from-rose-50 via-white to-emerald-50 px-4 py-10 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-7xl pt-20">
-      <div class="mb-10 text-center">
+      <div ref="headerRef" class="mb-10 text-center">
         <p class="text-sm font-semibold uppercase tracking-[0.3em] text-rose-400">Your Favourites</p>
         <h1 class="heading-serif mt-3 text-4xl font-semibold text-rose-950 sm:text-5xl">Wishlist</h1>
         <p class="mt-3 text-base text-stone-500">
@@ -48,11 +49,14 @@ import { useWishlistStore } from '@/stores/wishlist'
 import { useFlowerStore } from '@/stores/flowers'
 import LoadingBloom from '@/components/LoadingBloom.vue'
 import ProductCard from '@/components/ProductCard.vue'
+import gsap from 'gsap'
+import { prefersReducedMotion } from '@/animations/motion'
 
 const wishlistStore = useWishlistStore()
 const flowerStore = useFlowerStore()
 const { productIds } = storeToRefs(wishlistStore)
 
+const headerRef = ref<HTMLElement | null>(null)
 const loading = ref(true)
 
 const wishlisted = computed(() =>
@@ -60,6 +64,10 @@ const wishlisted = computed(() =>
 )
 
 onMounted(async () => {
+  if (headerRef.value && !prefersReducedMotion()) {
+    gsap.from(headerRef.value, { y: 30, autoAlpha: 0, duration: 0.6, ease: 'power2.out', immediateRender: false })
+  }
+
   await Promise.all([
     wishlistStore.fetchWishlist(),
     flowerStore.flowers.length === 0 ? flowerStore.fetchFlowers() : Promise.resolve()

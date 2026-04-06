@@ -1,3 +1,4 @@
+/** useFlowerMeaning.ts — Resolves symbolic meaning for a flower by DB column or type fallback */
 import { flowerMeanings } from '@/data/flower-meanings'
 
 interface HasMeaning {

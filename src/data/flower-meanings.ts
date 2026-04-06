@@ -1,3 +1,5 @@
+/** flower-meanings.ts — Static map of flower types to their symbolic meanings */
+
 /**
  * Default flower symbolism keyed by flower type.
  * Used as a fallback when a product doesn't have a custom `meaning` column.

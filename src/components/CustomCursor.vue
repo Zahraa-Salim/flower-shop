@@ -1,3 +1,4 @@
+<!-- CustomCursor.vue — GSAP-driven custom cursor that scales on interactive elements -->
 <template>
   <div v-if="!isTouch" ref="cursorRef" class="custom-cursor">
     <div class="cursor-dot" />

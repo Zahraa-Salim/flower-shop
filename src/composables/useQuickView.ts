@@ -1,3 +1,4 @@
+/** useQuickView.ts — Reactive state for the product quick-view modal */
 import { ref } from 'vue'
 import type { Product } from '@/stores/flowers'
 

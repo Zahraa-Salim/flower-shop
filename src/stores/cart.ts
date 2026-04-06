@@ -1,3 +1,4 @@
+/** cart.ts — Pinia store for shopping cart with localStorage persistence */
 import { defineStore } from 'pinia'
 import type { Product } from '@/stores/flowers'
 

@@ -1,7 +1,8 @@
+<!-- Recommender.vue — Step-by-step guided bouquet finder by occasion, recipient, and budget -->
 <template>
   <section class="min-h-screen bg-gradient-to-b from-rose-50 via-white to-emerald-50 px-4 py-10 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-2xl pt-20">
-      <div class="text-center mb-10">
+      <div ref="headerRef" class="text-center mb-10">
         <p class="text-sm font-semibold uppercase tracking-[0.3em] text-rose-400">Bouquet Advisor</p>
         <h1 class="heading-serif mt-3 text-4xl font-semibold text-rose-950 sm:text-5xl">Find the Perfect Bouquet</h1>
         <p class="mt-3 text-base text-stone-500">
@@ -112,8 +113,12 @@
 import { computed, onMounted, ref } from 'vue'
 import { useFlowerStore, type Product } from '@/stores/flowers'
 import { getFlowerMeaning } from '@/composables/useFlowerMeaning'
+import gsap from 'gsap'
+import { prefersReducedMotion } from '@/animations/motion'
 
 const store = useFlowerStore()
+
+const headerRef = ref<HTMLElement | null>(null)
 
 const step = ref(1)
 const recipient = ref('')
@@ -196,6 +201,10 @@ const reset = () => {
 }
 
 onMounted(async () => {
+  if (headerRef.value && !prefersReducedMotion()) {
+    gsap.from(headerRef.value, { y: 30, autoAlpha: 0, duration: 0.6, ease: 'power2.out', immediateRender: false })
+  }
+
   if (!store.flowers.length) await store.fetchFlowers()
 })
 </script>

@@ -1,3 +1,4 @@
+<!-- Home.vue — Landing page with hero, occasions grid, featured products, testimonials, and gallery -->
 <template>
   <div class="home">
 
@@ -270,12 +271,12 @@ const testimonials = [
 ]
 
 const galleryImgs = [
-  'https://images.unsplash.com/photo-1487530811015-780f4d5b8b7e?w=400&q=80',
-  'https://images.unsplash.com/photo-1490750967868-88df5691cc0e?w=400&q=80',
-  'https://images.unsplash.com/photo-1559563362-c667ba5f5480?w=400&q=80',
-  'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=400&q=80',
-  'https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?w=400&q=80',
-  'https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=400&q=80',
+  'https://images.unsplash.com/photo-1490750967868-88df5691cc0e?w=400&q=80',   // Red roses
+  'https://images.unsplash.com/photo-1562690868-60bbe7293e94?w=400&q=80',   // Pink peonies
+  'https://images.unsplash.com/photo-1520763185298-1b434c919102?w=400&q=80',   // Purple tulips
+  'https://images.unsplash.com/photo-1530092285049-1c42085fd395?w=400&q=80',   // Blue hydrangeas
+  'https://images.unsplash.com/photo-1551893478-d60cc4042aca?w=400&q=80',   // Sunflowers
+  'https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=400&q=80',   // Pink roses
 ]
 
 const stats = [

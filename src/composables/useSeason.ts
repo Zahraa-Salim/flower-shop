@@ -1,3 +1,4 @@
+/** useSeason.ts — Detects current season and applies seasonal CSS custom properties */
 import { seasonalThemes, type Season, type SeasonalTheme } from '@/data/seasonal-themes'
 
 function getCurrentSeason(): Season {

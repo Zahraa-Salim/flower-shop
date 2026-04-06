@@ -1,6 +1,10 @@
+<!-- Register.vue — New account registration form -->
 <template>
   <section class="flex min-h-screen items-center justify-center bg-gradient-to-b from-rose-50 via-white to-emerald-50 px-4 py-10 sm:px-6 lg:px-8">
     <div class="mx-auto w-full max-w-md">
+      <div class="mb-8 text-center">
+        <router-link to="/" class="heading-serif text-3xl font-semibold tracking-wide text-rose-950 hover:text-rose-800 transition">✿ La Fleur</router-link>
+      </div>
       <div class="rounded-[2rem] bg-white/90 p-8 shadow-sm ring-1 ring-rose-100">
         <div class="space-y-3 text-center">
           <p class="text-sm font-semibold uppercase tracking-[0.3em] text-rose-400">Join The Garden</p>

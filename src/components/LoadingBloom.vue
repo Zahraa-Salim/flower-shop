@@ -1,3 +1,4 @@
+<!-- LoadingBloom.vue — Themed flower petal loading spinner -->
 <!--
   LoadingBloom.vue
   Themed loading spinner with animated flower petals and pulsing text.

@@ -1,3 +1,4 @@
+<!-- BouquetBuilder.vue — Interactive stem-by-stem custom bouquet designer with progress ring -->
 <template>
   <section class="min-h-screen bg-gradient-to-b from-rose-50 via-white to-emerald-50 px-4 pt-24 pb-10 sm:px-6 lg:px-8">
     <!-- Floating petals (decorative) -->

@@ -1,3 +1,4 @@
+<!-- SearchBar.vue — Fuzzy search input with animated dropdown results -->
 <template>
   <div class="search-bar" ref="wrapperRef">
     <!-- Collapsed: icon only (mobile) -->

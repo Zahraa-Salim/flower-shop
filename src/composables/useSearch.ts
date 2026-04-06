@@ -1,3 +1,4 @@
+/** useSearch.ts — Fuzzy product search with debounce and relevance scoring */
 import { ref, watch } from 'vue'
 import type { Product } from '@/stores/flowers'
 

@@ -1,3 +1,4 @@
+/** index.ts — Route definitions with lazy loading, auth guards, and transition direction */
 import { createRouter, createWebHistory } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import { usePageTransition } from '@/composables/usePageTransition'

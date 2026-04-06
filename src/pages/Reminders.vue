@@ -1,7 +1,8 @@
+<!-- Reminders.vue — Personal occasion reminders manager -->
 <template>
   <section class="min-h-screen bg-gradient-to-b from-rose-50 via-white to-emerald-50 px-4 pt-24 pb-10 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-6xl space-y-8">
-      <div class="rounded-[2rem] bg-white/85 p-8 shadow-sm ring-1 ring-rose-100">
+      <div ref="headerRef" class="rounded-[2rem] bg-white/85 p-8 shadow-sm ring-1 ring-rose-100">
         <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div class="space-y-3">
             <p class="text-sm font-semibold uppercase tracking-[0.3em] text-rose-400">Thoughtful Planning</p>
@@ -141,6 +142,8 @@ import { storeToRefs } from 'pinia'
 import { useRouter } from 'vue-router'
 import { supabase } from '@/lib/supabase'
 import { useAuthStore } from '@/stores/auth'
+import gsap from 'gsap'
+import { prefersReducedMotion } from '@/animations/motion'
 
 interface Reminder {
   id: number
@@ -154,6 +157,7 @@ const router = useRouter()
 const authStore = useAuthStore()
 const { user } = storeToRefs(authStore)
 
+const headerRef = ref<HTMLElement | null>(null)
 const reminders = ref<Reminder[]>([])
 const loading = ref(true)
 const submitting = ref(false)
@@ -224,6 +228,10 @@ const deleteReminder = async (id: number) => {
 }
 
 onMounted(async () => {
+  if (headerRef.value && !prefersReducedMotion()) {
+    gsap.from(headerRef.value, { y: 30, autoAlpha: 0, duration: 0.6, ease: 'power2.out', immediateRender: false })
+  }
+
   await authStore.fetchUser()
 
   if (!user.value) {

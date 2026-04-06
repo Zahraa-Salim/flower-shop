@@ -1,3 +1,4 @@
+/** seasonal-themes.ts — Season-to-color-palette mapping for dynamic theming */
 export type Season = 'spring' | 'summer' | 'autumn' | 'winter'
 
 export interface SeasonalTheme {

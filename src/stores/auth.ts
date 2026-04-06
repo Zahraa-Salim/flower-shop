@@ -1,3 +1,4 @@
+/** auth.ts — Pinia store for authentication state and admin role detection */
 import { defineStore } from 'pinia'
 import type { User } from '@supabase/supabase-js'
 import { supabase } from '@/lib/supabase'

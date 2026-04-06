@@ -1,3 +1,4 @@
+<!-- Dashboard.vue — Admin panel for managing products and orders -->
 <template>
   <section class="min-h-screen bg-gradient-to-b from-slate-50 via-white to-emerald-50 px-4 py-10 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-7xl space-y-8">

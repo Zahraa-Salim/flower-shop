@@ -1,3 +1,4 @@
+/** useMagneticButton.ts — GSAP magnetic hover effect for buttons */
 import { onMounted, onUnmounted, type Ref } from 'vue'
 import gsap from 'gsap'
 import { prefersReducedMotion } from '@/animations/motion'

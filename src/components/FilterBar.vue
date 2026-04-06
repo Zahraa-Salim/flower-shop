@@ -1,3 +1,4 @@
+<!-- FilterBar.vue — Product filter controls for type, color, and occasion -->
 <template>
   <div class="filterbar">
     <div class="filterbar__inner">

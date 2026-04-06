@@ -1,3 +1,4 @@
+<!-- ProductDetail.vue — Single product view with reviews, flower meaning, and quantity selector -->
 <template>
   <section class="min-h-screen bg-gradient-to-b from-rose-50 via-white to-emerald-50 px-4 pt-24 pb-10 sm:px-6 lg:px-8">
     <div class="mx-auto max-w-6xl">

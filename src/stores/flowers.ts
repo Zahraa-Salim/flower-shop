@@ -1,3 +1,4 @@
+/** flowers.ts — Pinia store for product catalog fetching and filtering */
 import { defineStore } from 'pinia'
 import { supabase } from '@/lib/supabase'
 

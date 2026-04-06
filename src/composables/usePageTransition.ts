@@ -1,3 +1,4 @@
+/** usePageTransition.ts — Tracks navigation direction for page slide transitions */
 import { ref } from 'vue'
 
 export type TransitionDirection = 'forward' | 'backward'

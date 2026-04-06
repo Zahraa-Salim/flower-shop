@@ -1,3 +1,4 @@
+<!-- ProductCard.vue — Dark overlay product card with hover animations and flower meaning -->
 <template>
   <article
     ref="cardRef"

@@ -268,20 +268,20 @@ INSERT INTO product_occasions (product_id, occasion_id) VALUES
   (40, 8), (40, 1), (40, 3);
 
 
--- BOUQUET COMPONENTS
+-- BOUQUET COMPONENTS (unique images matching each flower type)
 INSERT INTO bouquet_components (name, price, image_url, stock) VALUES
-  ('Single Red Rose', 4.00, 'https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?w=300', 200),
-  ('Single Pink Rose', 3.50, 'https://images.unsplash.com/photo-1559563362-c667ba5f5480?w=300', 200),
-  ('Single White Rose', 3.50, 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=300', 200),
-  ('Single Yellow Rose', 3.00, 'https://images.unsplash.com/photo-1508610048659-a06b669e3321?w=300', 200),
-  ('Tulip Stem', 2.50, 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300', 300),
-  ('Sunflower Stem', 3.00, 'https://images.unsplash.com/photo-1487530811015-780f4d5b8b7e?w=300', 250),
-  ('Lily Stem', 3.50, 'https://images.unsplash.com/photo-1490750967868-88df5691cc0e?w=300', 200),
-  ('Hydrangea Head', 5.00, 'https://images.unsplash.com/photo-1426122402199-be02db90eb90?w=300', 150),
-  ('Peony Stem', 6.00, 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=300', 100),
-  ('Lavender Sprig', 2.00, 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=300', 300),
-  ('Baby''s Breath Filler', 1.50, 'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=300', 400),
-  ('Green Eucalyptus', 2.00, 'https://images.unsplash.com/photo-1548094990-c16ca90f1f0d?w=300', 350),
+  ('Single Red Rose', 4.00, 'https://images.unsplash.com/photo-1490750967868-88df5691cc0e?w=300&q=80', 200),
+  ('Single Pink Rose', 3.50, 'https://images.unsplash.com/photo-1455659817273-f96807779a8a?w=300&q=80', 200),
+  ('Single White Rose', 3.50, 'https://images.unsplash.com/photo-1558652093-3685a170faa5?w=300&q=80', 200),
+  ('Single Yellow Rose', 3.00, 'https://images.unsplash.com/photo-1548460397-fbe0be4e04f5?w=300&q=80', 200),
+  ('Tulip Stem', 2.50, 'https://images.unsplash.com/photo-1520763185298-1b434c919102?w=300&q=80', 300),
+  ('Sunflower Stem', 3.00, 'https://images.unsplash.com/photo-1551893478-d60cc4042aca?w=300&q=80', 250),
+  ('Lily Stem', 3.50, 'https://images.unsplash.com/photo-1501577316686-62e37ea27c2b?w=300&q=80', 200),
+  ('Hydrangea Head', 5.00, 'https://images.unsplash.com/photo-1530092285049-1c42085fd395?w=300&q=80', 150),
+  ('Peony Stem', 6.00, 'https://images.unsplash.com/photo-1562690868-60bbe7293e94?w=300&q=80', 100),
+  ('Lavender Sprig', 2.00, 'https://images.unsplash.com/photo-1499561385668-5ebdb06a79bc?w=300&q=80', 300),
+  ('Baby''s Breath Filler', 1.50, 'https://images.unsplash.com/photo-1487530811176-3780de880c2d?w=300&q=80', 400),
+  ('Green Eucalyptus', 2.00, 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=300&q=80', 350),
   ('Ribbon (Pink)', 1.00, NULL, 500),
   ('Ribbon (White)', 1.00, NULL, 500),
   ('Gift Box Wrap', 3.00, NULL, 200);

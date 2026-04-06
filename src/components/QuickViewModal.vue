@@ -1,3 +1,4 @@
+<!-- QuickViewModal.vue — Full-screen product preview modal with add-to-cart -->
 <template>
   <Teleport to="body">
     <Transition name="qv">

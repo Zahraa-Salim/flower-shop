@@ -1,3 +1,4 @@
+<!-- OptimizedImage.vue — Picture element wrapper with WebP source and responsive srcset -->
 <template>
   <picture>
     <source

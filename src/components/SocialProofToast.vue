@@ -1,3 +1,4 @@
+<!-- SocialProofToast.vue — Animated toast showing recent order notifications -->
 <template>
   <Transition name="social-toast">
     <div
